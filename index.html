@@ -84,7 +84,7 @@
 						<div class="col-md-10 row">
 							<div v-for="lesson in sortedLessons" class="col-md-4">
 							<div class="card mb-4">
-								<img class="card-img" v-bind:src="`http://localhost:3000/${lesson.image}`" alt="Lesson Image">
+								<img class="card-img" v-bind:src="`https://cwtwo-web.herokuapp.com/${lesson.image}`" alt="Lesson Image">
 								<div class="card-body">
 									<h6>Subject: {{lesson.subject}}</h6>
 									<h6>Location: {{lesson.location}}</h6>
@@ -115,7 +115,7 @@
 					<div class="row">
 						<div v-for="(lesson, index) in cart" class="col-md-3 mb-4">
 							<div class="card">
-								<img class="card-img" v-bind:src="`http://localhost:3000/${fetchLesson(lesson.lessonID).image}`" alt="Lesson Image">
+								<img class="card-img" v-bind:src="`https://cwtwo-web.herokuapp.com/${fetchLesson(lesson.lessonID).image}`" alt="Lesson Image">
 								<div class="card-body">
 									<h6>Subject: {{fetchLesson(lesson.lessonID).subject}}</h6>
 									<h6>Location: {{fetchLesson(lesson.lessonID).location}}</h6>
