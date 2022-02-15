@@ -232,7 +232,7 @@
 	            this.lessons = this.lessons.filter(lesson => lesson.subject.toLowerCase().includes(this.term) == true || lesson.location.toLowerCase().includes(this.term));
             },
             checkOut: function () {
-                    fetch('https://cw2-individual-backend.herokuapp.com/collection/order', {
+                    fetch('https://cwtwo-web.herokuapp.com/collection/order', {
                         method: 'POST', // set the HTTP method as 'POST'
                         headers: {
                             'Content-Type': 'application/json', // set the data type as JSON
@@ -246,7 +246,7 @@
 
                     for (let index = 0; index < this.cart.length; index++) {
                         const lesson = this.fetchLesson(this.cart[index].lessonID);
-                        fetch(`https://cw2-individual-backend.herokuapp.com/collection/lesson/${lesson._id}`, {
+                        fetch(`https://cwtwo-web.herokuapp.com/collection/lesson/${lesson._id}`, {
                             method: 'PUT', // set the HTTP method as 'POST'
                             headers: {
                                 'Content-Type': 'application/json', // set the data type as JSON
